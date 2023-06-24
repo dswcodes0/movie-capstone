@@ -14,7 +14,7 @@ May want to explore movies from different countries and cultures.
 
 2. "Binge Watcher":
 
-3. Description: A user who finds joy in binge-watching TV shows and prefers immersive and captivating series.
+Description: A user who finds joy in binge-watching TV shows and prefers immersive and captivating series.
 Characteristics and needs:
 Enjoys watching multiple episodes or seasons of a TV series in one sitting.
 Seeks recommendations for shows that are engaging and have a compelling storyline.
@@ -32,7 +32,8 @@ Desires suggestions considering their previous viewing history to avoid redundan
 Values recommendations based on popular trends, critical acclaim, and user ratings.
 May appreciate additional features like trailers, reviews, or the ability to create watchlists.
 
-"Movie Enthusiast":
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. "Movie Enthusiast":
 
 Persona 1:
 
@@ -54,7 +55,7 @@ Access Frequency: He accesses the app once or twice a week to find movies that m
 Motivation: Mark is a busy professional and enjoys unwinding with a good movie after a long day. He uses the app to discover movies in specific genres, such as action and sci-fi, and relies on user ratings and reviews to make informed choices. He appreciates recommendations that are available on his preferred streaming platforms.
 Pain Points: Mark often finds it difficult to discover new movies beyond mainstream releases. He is frustrated by spending too much time searching for movies that align with his preferences and wishes for a more streamlined recommendation process.
 
-"Binge Watcher":
+2. "Binge Watcher":
 
 Persona 1:
 
@@ -76,7 +77,7 @@ Access Frequency: He accesses the app a few times a week, usually during weekend
 Motivation: David is a TV enthusiast and enjoys exploring a wide range of genres. He uses the app to find binge-worthy series that are critically acclaimed, highly rated, and have intriguing storylines. He appreciates recommendations that consider his preferred genres and availability on different streaming services.
 Pain Points: David often struggles to discover new TV shows outside his comfort zone. He desires personalized recommendations that expose him to lesser-known series and hidden gems.
 
-"Indecisive Viewer":
+3. "Indecisive Viewer":
 
 Persona 1:
 
@@ -97,6 +98,10 @@ Technology: Robert is moderately proficient with technology and mainly uses his 
 Access Frequency: He accesses the app a few times a month when he wants to find something new to watch.
 Motivation: Robert often spends a significant amount of time trying to choose a movie or show, and he wants to streamline this process. He uses the app to receive personalized recommendations based on his mood, previous viewing history, and popular trends. He appreciates a wide range of genres and seeks suggestions for both classic and recent releases.
 Pain Points: Robert finds it challenging to keep up with the latest trends and is unsure which movies or shows are worth his time. He wishes for a simplified recommendation system that understands his preferences and saves him from decision paralysis.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10 Short User Stories. 
 
 As a Movie Enthusiast, I want to create a user profile, so that I can personalize my movie recommendations based on my preferences and interests.
 As a Binge Watcher, I want to browse a list of trending TV shows, so that I can discover popular series to binge-watch.
