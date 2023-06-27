@@ -113,3 +113,20 @@ As a Movie Enthusiast, I want to create and manage a watchlist, so that I can sa
 As a Binge Watcher, I want to receive notifications when new seasons or episodes of my favorite TV shows are released, so that I can stay updated.
 As an Indecisive Viewer, I want to read reviews and ratings from other users, so that I can gather more information and make better decisions about what to watch.
 As a Movie Enthusiast, I want to explore movies from different countries and cultures, so that I can broaden my cinematic horizons and discover international gems.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Wireframes:
+<img width="375" alt="Screenshot 2023-06-27 at 3 07 20 PM" src="https://github.com/dswcodes0/movie-capstone/assets/136512071/168a30a9-0224-4bba-bdeb-ab903e8a5f3d">
+<img width="485" alt="Screenshot 2023-06-27 at 3 07 28 PM" src="https://github.com/dswcodes0/movie-capstone/assets/136512071/c1c2b647-3ca5-41db-a1d2-aa9f7eaebfc3">
+<img width="553" alt="Screenshot 2023-06-27 at 3 07 33 PM" src="https://github.com/dswcodes0/movie-capstone/assets/136512071/d203b536-4831-4988-940d-a11ccdf9d1b4">
+<img width="357" alt="Screenshot 2023-06-27 at 3 07 14 PM" src="https://github.com/dswcodes0/movie-capstone/assets/136512071/e0254ef9-185c-4345-97e3-9700d1c053d8">
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Project user flow:
+
+https://docs.google.com/document/d/1a8B_mfGf-LPZaIcaxmZghHbezotXj1cMe5IoAvD9Eyo/edit
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
