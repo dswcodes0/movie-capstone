@@ -138,20 +138,20 @@ https://docs.google.com/document/d/1utsq82Zx1mdjFTJFfKVRz-9MYoymBXiD5XAmOlEw_5o/
 
 Endpoints: 
 
-GET / Homepage - Returns a list of recommended shows/movies (User Stories: 7, 2, 3)
-GET /shows - Fetches a list of all available shows (User Story: 2)
-GET /movies - Fetches a list of all available movies (User Story: 2)
-GET /shows/:id - Fetches details of a specific show (User Story: 2, 5)
-GET /movies/:id - Fetches details of a specific movie (User Stories: 1, 5)
-POST /login - Authenticates and logs in a user (User Story: 5)
-POST /signup - Creates a new user account (User Story: 1)
-POST /recommendations - Provides personalized show/movie recommendations for a user (User Story: 6)
-POST /shows/:id/rating - Submits a rating for a specific show (User Stories: 6, 9)
-POST /movies/:id/rating - Submits a rating for a specific movie (User Story: 6)
-DELETE /shows/:id - Deletes a specific show from the database (User Story: 6)
-DELETE /movies/:id - Deletes a specific movie from the database (User Story: 6)
-PUT /shows/:id - Updates the details of a specific show (User Story: 5)
-PUT /movies/:id - Updates the details of a specific movie (User Story: 5)
+1. GET / Homepage - Returns a list of recommended shows/movies (User Stories: 7, 2, 3)
+2. GET /shows - Fetches a list of all available shows (User Story: 2)
+3. GET /movies - Fetches a list of all available movies (User Story: 2)
+4. GET /shows/:id - Fetches details of a specific show (User Story: 2, 5)
+5. GET /movies/:id - Fetches details of a specific movie (User Stories: 1, 5)
+6. POST /login - Authenticates and logs in a user (User Story: 5)
+7. POST /signup - Creates a new user account (User Story: 1)
+8 .POST /recommendations - Provides personalized show/movie recommendations for a user (User Story: 6)
+9. POST /shows/:id/rating - Submits a rating for a specific show (User Stories: 6, 9)
+10. POST /movies/:id/rating - Submits a rating for a specific movie (User Story: 6)
+11. DELETE /shows/:id - Deletes a specific show from the database (User Story: 6)
+12. DELETE /movies/:id - Deletes a specific movie from the database (User Story: 6)
+13. PUT /shows/:id - Updates the details of a specific show (User Story: 5)
+14. PUT /movies/:id - Updates the details of a specific movie (User Story: 5)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
