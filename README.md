@@ -103,16 +103,16 @@ Pain Points: Robert finds it challenging to keep up with the latest trends and i
 
 10 Short User Stories. 
 
-As a Movie Enthusiast, I want to create a user profile, so that I can personalize my movie recommendations based on my preferences and interests.
-As a Binge Watcher, I want to browse a list of trending TV shows, so that I can discover popular series to binge-watch.
-As an Indecisive Viewer, I want to explore movies and shows based on different genres, so that I can find options that align with my mood.
-As a Movie Enthusiast, I want to search for movies by specific actors or actresses, so that I can discover films featuring my favorite performers.
-As a Binge Watcher, I want to see detailed information about each TV show, including its plot, cast, and ratings, so that I can make informed decisions about what to watch.
-As an Indecisive Viewer, I want to receive personalized recommendations based on my viewing history and ratings, so that I can easily discover new content tailored to my taste.
-As a Movie Enthusiast, I want to create and manage a watchlist, so that I can save movies I'm interested in and revisit them later.
-As a Binge Watcher, I want to receive notifications when new seasons or episodes of my favorite TV shows are released, so that I can stay updated.
-As an Indecisive Viewer, I want to read reviews and ratings from other users, so that I can gather more information and make better decisions about what to watch.
-As a Movie Enthusiast, I want to explore movies from different countries and cultures, so that I can broaden my cinematic horizons and discover international gems.
+1. As a Movie Enthusiast, I want to create a user profile, so that I can personalize my movie recommendations based on my preferences and interests.
+2. As a Binge Watcher, I want to browse a list of trending TV shows, so that I can discover popular series to binge-watch.
+3. As an Indecisive Viewer, I want to explore movies and shows based on different genres, so that I can find options that align with my mood.
+4. As a Movie Enthusiast, I want to search for movies by specific actors or actresses, so that I can discover films featuring my favorite performers.
+5. As a Binge Watcher, I want to see detailed information about each TV show, including its plot, cast, and ratings, so that I can make informed decisions about what to watch.
+6. As an Indecisive Viewer, I want to receive personalized recommendations based on my viewing history and ratings, so that I can easily discover new content tailored to my taste.
+7. As a Movie Enthusiast, I want to create and manage a watchlist, so that I can save movies I'm interested in and revisit them later.
+8. As a Binge Watcher, I want to receive notifications when new seasons or episodes of my favorite TV shows are released, so that I can stay updated.
+9. As an Indecisive Viewer, I want to read reviews and ratings from other users, so that I can gather more information and make better decisions about what to watch.
+10. As a Movie Enthusiast, I want to explore movies from different countries and cultures, so that I can broaden my cinematic horizons and discover international gems.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -136,3 +136,85 @@ https://docs.google.com/document/d/1utsq82Zx1mdjFTJFfKVRz-9MYoymBXiD5XAmOlEw_5o/
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Endpoints: 
+
+GET / Homepage - Returns a list of recommended shows/movies (User Stories: 7, 2, 3)
+GET /shows - Fetches a list of all available shows (User Story: 2)
+GET /movies - Fetches a list of all available movies (User Story: 2)
+GET /shows/:id - Fetches details of a specific show (User Story: 2, 5)
+GET /movies/:id - Fetches details of a specific movie (User Stories: 1, 5)
+POST /login - Authenticates and logs in a user (User Story: 5)
+POST /signup - Creates a new user account (User Story: 1)
+POST /recommendations - Provides personalized show/movie recommendations for a user (User Story: 6)
+POST /shows/:id/rating - Submits a rating for a specific show (User Stories: 6, 9)
+POST /movies/:id/rating - Submits a rating for a specific movie (User Story: 6)
+DELETE /shows/:id - Deletes a specific show from the database (User Story: 6)
+DELETE /movies/:id - Deletes a specific movie from the database (User Story: 6)
+PUT /shows/:id - Updates the details of a specific show (User Story: 5)
+PUT /movies/:id - Updates the details of a specific movie (User Story: 5)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Data Models -
+
+User Model:
+id: Unique identifier for each user.
+name: User's name.
+email: User's email address.
+password: User's password (hashed and secured).
+preferences: User's preferences and interests.
+watchlist: List of movies/shows added to the user's watchlist.
+
+Movie Model:
+id: Unique identifier for each movie.
+title: Title of the movie.
+genre: Genre(s) of the movie.
+description: Brief description of the movie.
+release_date: Release date of the movie.
+duration: Duration of the movie (in minutes).
+rating: Average rating of the movie.
+trailer_url: URL to the movie's trailer on YouTube or other platforms.
+cover_image_url: URL to the movie's cover image.
+
+Rating Model:
+id: Unique identifier for each rating.
+user_id: Foreign key referencing the user who submitted the rating.
+movie_id: Foreign key referencing the movie being rated.
+show_id: Foreign key referencing the show being rated.
+rating: Numeric rating value (e.g., 1-5).
+
+Review Model:
+id: Unique identifier for each review.
+user_id: Foreign key referencing the user who wrote the review.
+movie_id: Foreign key referencing the movie being reviewed.
+show_id: Foreign key referencing the show being reviewed.
+content: Text content of the review.
+
+ChatBot Model:
+id: Unique identifier for each chat bot message.
+sender: The sender of the chat bot message (e.g., "Watcher Bot").
+content: The text content of the chat bot message.
+timestamp: Date and time when the chat bot message was sent.
+
+UserAuthentication Model:
+id: Unique identifier for each user authentication session.
+user_id: Foreign key referencing the user associated with the authentication session.
+token: Authentication token generated for the session.
+expiration: Expiration date and time for the authentication session.
+
+Search Model:
+id: Unique identifier for each search query.
+user_id: Foreign key referencing the user who performed the search.
+query: The search query entered by the user.
+timestamp: Date and time when the search was performed.
+
+API Model:
+id: Unique identifier for each API endpoint.
+name: Name of the API endpoint.
+description: Description of the purpose and functionality of the API endpoint.
+method: HTTP method (e.g., GET, POST, PUT, DELETE).
+route: URL route/path for accessing the API endpoint.
+request_body: Example request body for the API endpoint.
+response_body: Example response body for the API endpoint.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
