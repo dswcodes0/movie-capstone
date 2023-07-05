@@ -8,9 +8,8 @@ function App() {
       <BrowserRouter>
       <SignedOutHome />
       </BrowserRouter>
-      
     </div>
   );
 }
-
+//
 export default App;
