@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
-
 import './SignedOutHome.css';
 import SignIn from '../SignIn/SignIn'
 import SignUp from '../SignUp/SignUp'
@@ -19,17 +18,13 @@ const SignedOutHome = () => {
             </li>
           </ul>          
         </nav>
-        <Routes>
-          <Route element={<SignIn/>} path="/SignIn"></Route>
-          <Route element={<SignUp/>} path="/SignOut"></Route>
-        </Routes>
         </div>
         <div className="hero">
           <h1>
           Welcome to the Watcher!
           </h1>
           <div className='watcher'>
-            <img src="chatbot.png" alt="" />
+            <img src="../chatbot.png" alt="" />
           <button>Ask the Watcher</button>
           </div>
           <div className='features'>
