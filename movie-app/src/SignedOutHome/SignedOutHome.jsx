@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
 import './SignedOutHome.css';
-import SignIn from '../SignIn/SignIn'
-import SignUp from '../SignUp/SignUp'
 
 const SignedOutHome = () => {
     return (
