@@ -26,7 +26,7 @@ const SignedOutHome = () => {
         </div>
         <div className="hero">
           <h1>
-            
+            hi
           </h1>
         </div>
       </div>
