@@ -7,7 +7,6 @@ import SignUp from '../SignUp/SignUp'
 
 const SignedOutHome = () => {
     return (
-      <Router>
       <div>
         <nav>
           <ul> 
@@ -20,15 +19,14 @@ const SignedOutHome = () => {
           </ul>          
         </nav>
         <Routes>
-          <Route path="/SignIn">
-            <SignIn/>
+          <Route element={<SignIn/>} path="/SignIn">
+            
           </Route>
-          <Route path="/SignOut">
-            <SignUp/>
+          <Route element={<SignUp/>} path="/SignOut">
+            
           </Route>
         </Routes>
       </div>
-      </Router>
 
     );
   };
