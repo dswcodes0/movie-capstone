@@ -1,6 +1,7 @@
 import React from 'react';
 import './SignedInHome.css';
 import Chatbot from '../Chatbot/Chatbot';
+import Watchlist from '../Watchlist/Watchlist';
 
 const SignedInHome = () => {
     return (
@@ -17,9 +18,8 @@ const SignedInHome = () => {
       <div id='recommendations' className="recommendations">
         {/* Placeholder for recommended elements */}
       </div>
-      <div id='watchlist' className="watchlist">
-        {/* Placeholder for watchlist/history elements */}
-      </div>
+      <Watchlist/>
+      
 
       </div>
       
