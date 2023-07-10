@@ -1,0 +1,103 @@
+[
+    {
+      "title": "Inception",
+      "description": "A skilled thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+      "ratings": 4.5
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "description": "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
+      "ratings": 4.8
+    },
+    {
+      "title": "The Godfather",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "ratings": 4.9
+    },
+    {
+      "title": "Pulp Fiction",
+      "description": "Various interconnected stories of criminals, mobsters, and lowlifes intertwine in the seedy underbelly of Los Angeles.",
+      "ratings": 4.4
+    },
+    {
+      "title": "Fight Club",
+      "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+      "ratings": 4.6
+    },
+    {
+      "title": "Forrest Gump",
+      "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold through the perspective of an Alabama man with an IQ of 75.",
+      "ratings": 4.3
+    },
+    {
+      "title": "The Dark Knight",
+      "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "ratings": 4.7
+    },
+    {
+      "title": "The Matrix",
+      "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "ratings": 4.2
+    },
+    {
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "ratings": 4.9
+    },
+    {
+      "title": "Goodfellas",
+      "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+      "ratings": 4.7
+    },
+    {
+      "title": "Schindler's List",
+      "description": "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.",
+      "ratings": 4.9
+    },
+    {
+      "title": "The Silence of the Lambs",
+      "description": "A young FBI cadet must confide in an incarcerated and manipulative killer to receive his help on catching another serial killer who skins his victims.",
+      "ratings": 4.6
+    },
+    {
+      "title": "Star Wars: Episode V - The Empire Strikes Back",
+      "description": "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued by Darth Vader.",
+      "ratings": 4.8
+    },
+    {
+      "title": "Seven",
+      "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+      "ratings": 4.4
+    },
+    {
+      "title": "Interstellar",
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "ratings": 4.5
+    },
+    {
+      "title": "Gladiator",
+      "description": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+      "ratings": 4.3
+    },
+    {
+      "title": "The Departed",
+      "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+      "ratings": 4.5
+    },
+    {
+      "title": "The Prestige",
+      "description": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+      "ratings": 4.4
+    },
+    {
+      "title": "The Green Mile",
+      "description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+      "ratings": 4.7
+    },
+    {
+      "title": "The Usual Suspects",
+      "description": "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",
+      "ratings": 4.8
+    }
+  ]
+  
