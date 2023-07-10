@@ -1,10 +1,10 @@
 import express from 'express';
 import { sequelize } from './database.js';
 import { Users, Movies } from './modules/index.js';
-
 const app = express();
 
 app.use(express.json()); // Middleware for parsing JSON bodies from HTTP requests
+
 
 // Route to get all users
 app.get('/users', async (req, res) => {
@@ -39,6 +39,8 @@ app.get('/movies', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+
 
 // Route to create a new movie
 app.post('/movies', async (req, res) => {
