@@ -39,6 +39,10 @@ const SignedOutHome = () => {
               <p>Don't worry about saving anything, it'll all be here, just browse, we do the rest.</p>
               </div>
           </div>
+          <div>
+          <Link to="/SignedInHome">Go Home</Link>
+
+          </div>
         </div>
       </div>
       
