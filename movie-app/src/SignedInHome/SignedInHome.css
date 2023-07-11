@@ -30,17 +30,21 @@
   }
   
   nav img {
-    width: 40px;
-    height: 40px;
+    width: 65px; 
+    height: 65px; 
     margin-right: 10px;
+    margin-left: 0;
   }
   
+  
   nav input[type="text"] {
-    margin-right: 10px;
+    margin-right: 0; 
+    margin-left: auto; 
     padding: 6px 12px;
     border-radius: 4px;
     border: none;
   }
+  
   
   nav input[type="submit"] {
     padding: 6px 12px;
@@ -49,9 +53,5 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 10px;
   }
-  
-  .recommendations {
-    /* Add styling for recommendations section if needed */
-  }
-  

@@ -33,7 +33,7 @@ const SignedInHome = () => {
         <input type="submit" value="Submit" />
       </nav>
       <Chatbot />
-      <div className="container">
+      <div id="movies-grid" className="container">
         {movies.map((movie) => (
           <div key={movie.id} className="movie-card">
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
@@ -44,7 +44,7 @@ const SignedInHome = () => {
           </div>
         ))}
       </div>
-      <div className="recommendations">
+      <div id="recommendations" className="recommendations">
         {/* Placeholder for recommended elements */}
       </div>
       <Watchlist />
