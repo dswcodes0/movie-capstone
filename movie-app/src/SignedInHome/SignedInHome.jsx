@@ -34,11 +34,14 @@ const SignedInHome = () => {
       </nav>
       <Chatbot />
       <div id="movies-grid" className="container">
-        {users.map((user) => (
-          <div key={user.id}>{user.name}</div>
-        ))}
         {movies.map((movie) => (
-          <div key={movie.id}>{movie.title}</div>
+          <div key={movie.id} className="movie-card">
+            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            <div className="movie-info">
+              <h3>{movie.title}</h3>
+              <p>Rating: {movie.vote_average}</p>
+            </div>
+          </div>
         ))}
       </div>
       <div id="recommendations" className="recommendations">
