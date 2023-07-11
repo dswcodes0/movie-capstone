@@ -13,13 +13,13 @@ const SignedInHome = () => {
 
   async function fetchData() {
     try {
-      const usersResponse = await fetch('http://localhost:3000/users');
+      const usersResponse = await fetch('http://localhost:3002/users');
       const usersData = await usersResponse.json();
       setUsers(usersData);
 
-      const moviesResponse = await fetch('http://localhost:3000/movies');
+      const moviesResponse = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=eed0e2d8cf492449f59a2b5688eca30b');
       const moviesData = await moviesResponse.json();
-      setMovies(moviesData);
+      setMovies(moviesData.results);
     } catch (error) {
       console.log('Error fetching data:', error);
     }
@@ -36,6 +36,9 @@ const SignedInHome = () => {
       <div id="movies-grid" className="container">
         {users.map((user) => (
           <div key={user.id}>{user.name}</div>
+        ))}
+        {movies.map((movie) => (
+          <div key={movie.id}>{movie.title}</div>
         ))}
       </div>
       <div id="recommendations" className="recommendations">

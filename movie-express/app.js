@@ -1,9 +1,11 @@
 import express from 'express';
+import cors from 'cors';
 import { sequelize } from './database.js';
 import { Users, Movies } from './modules/index.js';
 const app = express();
 
 app.use(express.json()); // Middleware for parsing JSON bodies from HTTP requests
+app.use(cors());
 
 
 // Route to get all users
@@ -54,7 +56,7 @@ app.post('/movies', async (req, res) => {
 
 sequelize.sync({ alter: true })
   .then(() => {
-    const port = 3000;
+    const port = 3002;
     app.listen(port, () => {
       console.log(`App is listening on port ${port}`);
     });
