@@ -1,49 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import './SignedInHome.css';
-import Chatbot from '../Chatbot/Chatbot';
-import Watchlist from '../Watchlist/Watchlist';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Link, Route } from "react-router-dom";
+import './SignedOutHome.css';
 
-const SignedInHome = () => {
-  const [users, setUsers] = useState([]);
-  const [movies, setMovies] = useState([]);
+const SignedOutHome = () => {
+    return (
+      <div className='main'>
+        <div className="navbar">
+        <nav>
+          <ul> 
+            <li>
+              <Link to="/SignIn">Sign In</Link>
+            </li>
+            <li>
+            <Link to="/SignUp">Sign Up</Link>
+            </li>
+          </ul>          
+        </nav>
+        </div>
+        <div className="hero">
+          <h1>
+          Welcome to the Watcher!
+          </h1>
+          <div className='watcher'>
+            <img src="../chatbot.png" alt="" />
+          <button>Ask the Watcher</button>
+          </div>
+          <div className='features'>
+              <div className="feature">
+                <h3>Recomendations</h3>
+                <p>Get personalized ecomendations based on your watch history</p>
+              </div>
+              <div className="feature">
+              <h3>Trailers</h3>
+              <p>Get HD trailers to any show you would like to view</p>
+              </div>
+              <div className="feature">
+              <h3>Saved Progress</h3>
+              <p>Don't worry about saving anything, it'll all be here, just browse, we do the rest.</p>
+              </div>
+          </div>
+          <div>
+          <Link to="/SignedInHome">Go Home</Link>
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  async function fetchData() {
-    try {
-      const usersResponse = await fetch('http://localhost:3000/users');
-      const usersData = await usersResponse.json();
-      setUsers(usersData);
-
-      const moviesResponse = await fetch('http://localhost:3000/movies');
-      const moviesData = await moviesResponse.json();
-      setMovies(moviesData);
-    } catch (error) {
-      console.log('Error fetching data:', error);
-    }
-  }
-
-  return (
-    <div>
-      <nav>
-        <img src="../chatbot.png" alt="" />
-        <input type="text" placeholder="Search..." />
-        <input type="submit" value="Submit" />
-      </nav>
-      <Chatbot />
-      <div id="movies-grid" className="container">
-        {users.map((user) => (
-          <div key={user.id}>{user.name}</div>
-        ))}
+          </div>
+        </div>
       </div>
-      <div id="recommendations" className="recommendations">
-        {/* Placeholder for recommended elements */}
-      </div>
-      <Watchlist />
-    </div>
-  );
-};
+      
 
-export default SignedInHome;
+    );
+  };
+  
+  export default SignedOutHome;
