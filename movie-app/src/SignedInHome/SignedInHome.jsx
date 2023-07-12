@@ -10,6 +10,7 @@ const baseUrl = 'https://api.themoviedb.org/3/';
 const SignedInHome = () => {
   const [users, setUsers] = useState([]);
   const [movies, setMovies] = useState([]);
+  const [loadMoreVisible, setLoadMoreVisible] = useState(true);
 
   useEffect(() => {
     fetchData();
@@ -21,39 +22,29 @@ const SignedInHome = () => {
       const usersData = await usersResponse.json();
       setUsers(usersData);
 
-      const moviesResponse = await fetch(`${baseUrl}discover/movie?api_key=${apiKey}&with_genres=16`);
+      const moviesResponse = await fetch(`${baseUrl}discover/movie?api_key=${apiKey}&with_genres=16&page=${pageNumber}`);
       const moviesData = await moviesResponse.json();
-      setMovies(moviesData.results);
+      setMovies((prevMovies) => [...prevMovies, ...moviesData.results]);
+
+      // Hide the Load More button if there are no more pages
+      if (moviesData.total_pages <= pageNumber) {
+        setLoadMoreVisible(false);
+      }
     } catch (error) {
       console.log('Error fetching data:', error);
     }
   }
 
-  const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZWQwZTJkOGNmNDkyNDQ5ZjU5YTJiNTY4OGVjYTMwYiIsInN1YiI6IjY0OGM5MDNhYzJmZjNkMDEzOWFkNGQwMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9SSmYoi70K8GfjtiERXD3N2D8Cwf1pG3I0eH2Nb5mUw'
-    }
+  const loadMoreMovies = () => {
+    pageNumber++;
+    fetchData();
   };
-
-  async function fetchSearchedMovie(event) {
-    event.preventDefault();
-    const searchInput = document.getElementById('search-input').value;
-    try {
-      const moviesResponse = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchInput}&include_adult=false&language=en-US&page=1`, options);
-      const moviesData = await moviesResponse.json();
-      setMovies(moviesData.results);
-    } catch (error) {
-      console.error('Error fetching searched movies:', error);
-    }
-  }
 
   return (
     <div>
       <header>
-        <img src="../chatbot.png" alt="" />
-        <form onSubmit={fetchSearchedMovie}>
+        <h1 className="logo-text">Watcher</h1>
+        <form>
           <input id='search-input' type="text" placeholder="Search..." />
           <button type="submit">Submit</button>
         </form>
@@ -72,6 +63,11 @@ const SignedInHome = () => {
           </div>
         ))}
       </div>
+      {loadMoreVisible && (
+        <div className="load-more-container">
+          <button className="load-more-button" onClick={loadMoreMovies}>Load More</button>
+        </div>
+      )}
       <div className="recommendations">
         {/* Placeholder for recommended elements */}
       </div>

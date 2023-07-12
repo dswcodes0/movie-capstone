@@ -6,6 +6,8 @@ body {
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 header {
   background-color: #000;
   display: flex;
@@ -21,6 +23,16 @@ header img {
   height: 95px;
   margin-right: auto;
 }
+
+header .logo-text {
+  font-size: 48px;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-left: 64px;
+}
+
 
 header input[type="text"] {
   margin-right: 0;
@@ -89,4 +101,20 @@ header button[type="submit"] {
   color: #e50914;
   font-family: 'Arial', sans-serif;
   margin: 0;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.load-more-button {
+  padding: 16px 32px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
