@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+body {
+  background-color: #221f1f;
+  margin: 0;
+  padding: 0;
+}
+
 header {
   background-color: #000;
   display: flex;
@@ -13,8 +19,7 @@ header {
 header img {
   width: 95px;
   height: 95px;
-  margin-right: 10px;
-  margin-left: 0;
+  margin-right: auto;
 }
 
 header input[type="text"] {
@@ -33,37 +38,55 @@ header button[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 0;
 }
 
+
 .movie-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .movie-card {
-  width: 200px;
-  text-align: center;
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  background-color: #111;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .movie-card img {
   width: 100%;
   height: auto;
+  display: block;
   object-fit: cover;
-  border-radius: 8px;
+  margin: 0 auto;
+  border-radius: 4px 4px 0 0;
 }
 
 .movie-info {
-  margin-top: 8px;
+  padding: 16px;
+  text-align: center;
 }
 
 .movie-card h3 {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 4px;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
 }
 
 .movie-card p {
-  font-size: 18px;
+  font-size: 14px;
+  color: #e50914;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
 }
