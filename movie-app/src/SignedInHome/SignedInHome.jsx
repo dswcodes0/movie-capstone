@@ -26,7 +26,6 @@ const SignedInHome = () => {
       const moviesData = await moviesResponse.json();
       setMovies((prevMovies) => [...prevMovies, ...moviesData.results]);
 
-      // Hide the Load More button if there are no more pages
       if (moviesData.total_pages <= pageNumber) {
         setLoadMoreVisible(false);
       }
