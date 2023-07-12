@@ -12,7 +12,7 @@
   font-size: 64px;
   font-weight: bold;
   font-family: 'Bebas Neue', sans-serif;
-  color: #e50914;
+  color: red;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -31,14 +31,13 @@
 .chatbot-img input[type="text"] {
   width: 320px;
   height: 32px;
-  padding: 12px;
+  padding: 12px; 
   border-radius: 4px;
-  border: 1px solid #fff;
+  border: none;
   margin-bottom: 10px;
   text-align: center;
   font-size: 16px;
-  color: #fff;
-  background-color: #111;
+
 }
 
 .chatbot-img input[type="submit"] {
