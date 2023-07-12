@@ -11,6 +11,8 @@ const SignedInHome = () => {
   const [users, setUsers] = useState([]);
   const [movies, setMovies] = useState([]);
   const [loadMoreVisible, setLoadMoreVisible] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -39,37 +41,65 @@ const SignedInHome = () => {
     fetchData();
   };
 
+  const handleInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = async (event) => {
+    event.preventDefault();
+
+    try {
+      const searchResponse = await fetch(`${baseUrl}search/movie?api_key=${apiKey}&query=${searchQuery}`);
+      const searchData = await searchResponse.json();
+      setSearchResults(searchData.results);
+    } catch (error) {
+      console.log('Error searching movies:', error);
+    }
+  };
+
   return (
     <div>
       <header>
         <h1 className="logo-text">Watcher</h1>
-        <form>
-          <input id='search-input' type="text" placeholder="Search..." />
+        <form onSubmit={handleSearch}>
+          <input id='search-input' type="text" placeholder="Search..." value={searchQuery} onChange={handleInputChange} />
           <button type="submit">Submit</button>
         </form>
       </header>
       <Chatbot />
       <div className="movie-grid">
-        {movies.map((movie) => (
-          <div key={movie.id} className="movie-card">
-            {movie.poster_path && (
-              <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-            )}
-            <div className="movie-info">
-              <h3>{movie.title}</h3>
-              <p>Rating: {movie.vote_average}</p>
+        {searchResults.length > 0 ? (
+          searchResults.map((movie) => (
+            <div key={movie.id} className="movie-card">
+              {movie.poster_path && (
+                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+              )}
+              <div className="movie-info">
+                <h3>{movie.title}</h3>
+                <p>Rating: {movie.vote_average}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          movies.map((movie, index) => (
+            <div key={index} className="movie-card">
+              {movie.poster_path && (
+                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+              )}
+              <div className="movie-info">
+                <h3>{movie.title}</h3>
+                <p>Rating: {movie.vote_average}</p>
+              </div>
+            </div>
+          ))
+        )}
       </div>
       {loadMoreVisible && (
         <div className="load-more-container">
           <button className="load-more-button" onClick={loadMoreMovies}>Load More</button>
         </div>
       )}
-      <div className="recommendations">
-        {/* Placeholder for recommended elements */}
-      </div>
+      <div className="recommendations"></div>
       <Watchlist />
     </div>
   );
