@@ -3,6 +3,7 @@
 header {
   background-color: #000;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   color: #fff;
@@ -24,7 +25,7 @@ header input[type="text"] {
   border: none;
 }
 
-header input[type="submit"] {
+header button[type="submit"] {
   padding: 16px 32px;
   background-color: #e50914;
   color: #fff;
@@ -35,34 +36,34 @@ header input[type="submit"] {
   margin-right: 10px;
 }
 
-.anime-grid {
+.movie-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.anime-card {
+.movie-card {
   width: 200px;
   text-align: center;
 }
 
-.anime-card img {
+.movie-card img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.anime-info {
+.movie-info {
   margin-top: 8px;
 }
 
-.anime-card h3 {
+.movie-card h3 {
   font-size: 20px;
   margin-bottom: 4px;
 }
 
-.anime-card p {
+.movie-card p {
   font-size: 18px;
 }
