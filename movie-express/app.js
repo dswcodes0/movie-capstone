@@ -32,6 +32,16 @@ app.get('/users/:id', async (req, res) => {
   }
 });
 
+app.post('/users', async (req, res) => {
+  try {
+    const newUser = await Users.create(req.body);
+    res.status(201).json(newUser);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+
 // Route to get all movies
 app.get('/movies', async (req, res) => {
   try {
