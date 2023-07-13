@@ -52,6 +52,25 @@ app.get('/movies', async (req, res) => {
   }
 });
 
+app.post('/users/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await Users.findOne({ where: { username } });
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (user.password !== password) {
+      return res.status(400).json({ message: 'Incorrect password' });
+    }
+
+    res.json({ message: 'Login successful' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 
 // Route to create a new movie
