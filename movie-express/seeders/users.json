@@ -1,0 +1,53 @@
+[
+    {
+      "username": "john_doe",
+      "email": "johndoe@gmail.com",
+      "password": "G00dP@ss1"
+    },
+    {
+      "username": "emma_smith",
+      "email": "emmasmith@gmail.com",
+      "password": "Str0ngP@ss2"
+    },
+    {
+      "username": "alex_jackson",
+      "email": "alexjackson@gmail.com",
+      "password": "S3cur3P@ss3"
+    },
+    {
+      "username": "lily_brown",
+      "email": "lilybrown@gmail.com",
+      "password": "@maz1ngP@ss4"
+    },
+    {
+      "username": "michael_robinson",
+      "email": "michaelrobinson@gmail.com",
+      "password": "C0mpl3xP@ss5"
+    },
+    {
+      "username": "olivia_thomas",
+      "email": "oliviathomas@gmail.com",
+      "password": "#$ecur3P@ss6"
+    },
+    {
+      "username": "ethan_wilson",
+      "email": "ethanwilson@gmail.com",
+      "password": "Str0ngP@ss7"
+    },
+    {
+      "username": "sophia_taylor",
+      "email": "sophiataylor@gmail.com",
+      "password": "S@f3P@ss8w"
+    },
+    {
+      "username": "noah_miller",
+      "email": "noahmiller@gmail.com",
+      "password": "G00dP@ss9w"
+    },
+    {
+      "username": "mia_anderson",
+      "email": "miaanderson@gmail.com",
+      "password": "P@ssw0rd10"
+    }
+  ]
+  
