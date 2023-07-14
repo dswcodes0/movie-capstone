@@ -12,7 +12,6 @@ const SignUp = () => {
     };
 
     try {
-      console.log("HEY")
       const response = await fetch('http://localhost:3002/users', {
         method: 'POST',
         headers: {
