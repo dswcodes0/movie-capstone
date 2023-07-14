@@ -10,7 +10,7 @@ const SignIn = () => {
       username: event.target.username.value,
       password: event.target.password.value
     };
-
+  
     try {
       const response = await fetch('http://localhost:3002/users/login', {
         method: 'POST',
@@ -20,17 +20,19 @@ const SignIn = () => {
         body: JSON.stringify(formData)
       });
   
+      const data = await response.json();
+  
       if (response.ok) {
-        alert('Login successful!');
-        // FIXME Redirect user to signed in home with the credentials entered
+        localStorage.setItem('sessionId', data.sessionId);
+        window.location.href = '/SignedInHome';
       } else {
-        const errorData = await response.json();
-        alert(`Login failed: ${errorData.message}`);
+        alert(`Login failed: ${data.message}`);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
     }
   };
+  
 
   return (
     <div className="container">
