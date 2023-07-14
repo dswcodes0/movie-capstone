@@ -1,12 +1,20 @@
 import express from 'express';
 import cors from 'cors';
+import session from 'express-session';
+import uuid from 'uuid';
+import sessionMap from './sessionMap.js'; 
 import { sequelize } from './database.js';
 import { Users, Movies } from './modules/index.js';
 const app = express();
 
 app.use(express.json()); // Middleware for parsing JSON bodies from HTTP requests
 app.use(cors());
-
+app.use(session({
+  secret: 'your-secret-key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
 
 // Route to get all users
 app.get('/users', async (req, res) => {
@@ -17,6 +25,30 @@ app.get('/users', async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+app.post('/users/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await Users.findOne({ where: { username } });
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (user.password !== password) {
+      return res.status(400).json({ message: 'Incorrect password' });
+    }
+
+    // Save session in sessionMap
+    const sessionId = uuid.v4();
+    sessionMap.set(sessionId, user);
+    res.json({ message: 'Login successful', sessionId });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 
 // Route to get a user by id
 app.get('/users/:id', async (req, res) => {
@@ -32,6 +64,16 @@ app.get('/users/:id', async (req, res) => {
   }
 });
 
+app.post('/users', async (req, res) => {
+  try {
+    const newUser = await Users.create(req.body);
+    res.status(201).json(newUser);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+
 // Route to get all movies
 app.get('/movies', async (req, res) => {
   try {
@@ -42,6 +84,25 @@ app.get('/movies', async (req, res) => {
   }
 });
 
+app.post('/users/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = await Users.findOne({ where: { username } });
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    if (user.password !== password) {
+      return res.status(400).json({ message: 'Incorrect password' });
+    }
+
+    res.json({ message: 'Login successful' });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
 
 
 // Route to create a new movie
